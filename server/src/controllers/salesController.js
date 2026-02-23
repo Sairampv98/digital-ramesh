@@ -1,4 +1,4 @@
-const processSale = require('../sale_logic');
+const processSale = require('../utils/sale_logic');
 
 async function sales (req, res){
     const {customerId, productName} = req.body;

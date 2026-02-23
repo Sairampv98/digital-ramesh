@@ -5,15 +5,22 @@ const router = require('./routes/customer_logic');
 const mCrud = require('./routes/mongoCrud');
 const pRouter = require('./routes/product');
 const sRouter = require('./routes/sell');
-require('dotenv').config();
+const summary = require('./routes/summary');
+const wRouter = require('./routes/weather');
+const testRouter = require('./routes/test');
 
+require('dotenv').config();
 const app = express();
 connectMongo();
+
 app.use(express.json());
 app.use('/products', pRouter);
 app.use('/api', router);
 app.use('/mongo-crud', mCrud);
 app.use('/', sRouter);
+app.use('/summary', summary);
+app.use('/advice', wRouter);
+app.use('/test', testRouter);
 
 app.get('/test', async (req,res) => {
     try {
