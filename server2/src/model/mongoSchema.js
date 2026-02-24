@@ -20,20 +20,3 @@ Step 1: Code Changes
 1.1 Update models/mongoSchema.js
 We add mysqlId to store the MySQL Primary Key.
 */
-
-/*
-const mongoose = require('mongoose');
-
-const customerSchema = new mongoose.Schema({
-    customer: {
-        type: String
-    },
-    phone: {
-        type: String
-    }
-});
-
-const Customer = mongoose.model("newcustomer", customerSchema);
-
-module.exports = Customer;
-*/

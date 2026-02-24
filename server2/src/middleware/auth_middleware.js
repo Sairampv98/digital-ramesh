@@ -6,10 +6,10 @@ const authenticateStaff = (req, res, next) => {
 
     if (staffKey && staffKey === validKey) {
         console.log("Staff Access Granted");
-        return next(); // Proceed to the controller
+        next(); // Proceed to the controller
     } else {
         console.log("Unauthorized Access Attempt");
-        return res.status(401).json({ 
+        res.status(401).json({ 
             success: false, 
             error: "Unauthorized: Invalid or missing Staff API Key" 
         });

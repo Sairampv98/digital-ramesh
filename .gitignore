@@ -1,4 +1,11 @@
 server/node_modules
+server/package-lock.json
 server-example/node_modules
 server2/node_modules
+server2/package-lock.json
 server/src/.env
+client/node_modules
+client/eslint.config.js
+client/vite.config.js
+client/public
+client/package-lock.json

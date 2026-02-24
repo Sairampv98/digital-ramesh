@@ -61,33 +61,3 @@ Route Integration: Ensure routes/test.js returns the newly saved/updated documen
 3.1 Updated utils/test.js
 We will fetch the data and persist it immediately.
 */
-
-/*
-const axios = require('axios');
-const mongoTest = require('../models/mongoTestSchema');
-const express = require('express');
-
-const app = express();
-app.use(express.json());
-
-const tester = async () => {
-    try {
-        const response = await axios.get('https://jsonplaceholder.typicode.com/posts/1');
-        const {userID, id, title, body} = response.data;
-        const newTest_input = new mongoTest({userID, id, title, body} );
-        const tested = await newTest_input.save();
-        console.log(tested);
-        if(tested.length == 0){
-            return {exist:false, data: null};
-        } else{
-            return {exist:false, data: tested};
-        }
-        
-    } catch (error) {
-        console.error("External API failed: ", error.message);
-        return {error: error.message};
-    }
-};
-
-module.exports = tester;
-*/

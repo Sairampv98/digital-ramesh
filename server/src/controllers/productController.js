@@ -14,4 +14,13 @@ async function product_add(req, res){
     
 };
 
-module.exports = product_add;
+async function product_list(req, res) {
+    try {
+        const allProducts = await product.find({});
+        res.status(200).json(allProducts);
+    } catch (error) {
+        res.status(500).json({ error: "Failed to fetch products" });
+    }
+}
+
+module.exports = { product_add, product_list }; // Note: export as object now

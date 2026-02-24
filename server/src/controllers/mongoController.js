@@ -1,4 +1,6 @@
 const Customer = require('../models/mongoSchema');
+const sqlDB = require('../config/db_mysql');
+const sRouter = require('../routes/sell');
 
 async function write (req, res) {
     try {
