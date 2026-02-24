@@ -3,6 +3,7 @@ server/package-lock.json
 server-example/node_modules
 server2/node_modules
 server2/package-lock.json
+server2/src/.env
 server/src/.env
 client/node_modules
 client/eslint.config.js
